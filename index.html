@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="projects.html">Projects</a> |
+  <a href="contact.html">Contact</a>
+</nav>
+  <div class="sidebar">
+    <h2>My Portfolio</h2>
+    <nav class="nav">
+      <a href="#" class="active">Home</a>
+      <a href="about(1).html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="main-content">
+    <h1>Hi, I’m <strong>Shifa Ahad</strong> 👋</h1>
+    <p>B.Tech CSE Student | 🎓 FISAT </p>
+
+    <h2>About Me</h2>
+    <p>I'm a passionate tech enthusiast currently pursuing Computer Science. I enjoy learning about new technologies and working on creative projects that make life easier.</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website – This one! 🎉</li>
+      <li>Calculator – Built using python</li>
+      <li>To-do list – Built using html, css, and javascript </li>
+      <li>Form Validator – Built using html, and javascript</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, Python, C, C++</p>
+
+    <h2>Contact Me</h2>
+    <p>shifaahad@gmail.com</p>
+  </div>
+
+  
+ <script>
+  // Function to toggle dark mode and save preference
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+  }
+
+  // When the page loads, check if dark mode was previously on
+  window.onload = function() {
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+</body>
+</html>

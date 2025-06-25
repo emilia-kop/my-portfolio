@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-form {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #2c248b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .contact-form button:hover {
+      background-color: #463df5;
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .contact-list li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .contact-list a {
+      color: #2c248b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="sidebar">
+    <h2>My Portfolio</h2>
+    <nav class="nav">
+      <a href="index(1).html">Home</a>
+      <a href="about(1).html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="projects.html">Projects</a> |
+  <a href="contact.html">Contact</a>
+</nav>
+  <div class="main-content">
+    <h1>Get in Touch!</h1>
+    <p>You can contact me through the following platforms:</p>
+
+    <ul class="contact-list">
+      <li><span class="icon">📧</span><a href="mailto:shifaahad@gmail.com">shifaahad@gmail.com</a></li>
+      <li><span class="icon">💼</span><a href="https://www.linkedin.com/in/shifa-ahad-96482427b/" target="_blank">LinkedIn</a></li>
+      <li><span class="icon">📷</span><a href="https://www.instagram.com/_shifahad_/" target="_blank">Instagram</a></li>
+      <li><span class="icon">💻</span><a href="https://github.com/emilia-kop" target="_blank">GitHub</a></li>
+    </ul>
+
+    <p>Feel free to connect, ask questions, or just say hi! 😊</p>
+  </div>
+
+ <script>
+  // Function to toggle dark mode and save preference
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+  }
+
+  // When the page loads, check if dark mode was previously on
+  window.onload = function() {
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+</body>
+</html>
+
