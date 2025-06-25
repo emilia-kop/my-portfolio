@@ -1,0 +1,120 @@
+
+
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+
+body {
+  display: flex;
+
+}
+
+.sidebar {
+  background-color: #2c248b;
+  color: white;
+  width: 220px;
+  min-height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+   .nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #3a32c0;
+  display: block;
+}
+
+.nav a:hover {
+  background-color: #3a32c0;
+}
+
+.nav a.active {
+  background-color: #463df5;
+}
+
+
+    .dark-toggle {
+      margin-top: 40px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      background: #fff;
+      color: #2c248b;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+.dark-toggle:hover {
+  background: #ddd;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 40px;
+  flex: 1;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  margin: 10px 0;
+}
+  .buttons {
+      margin: 20px 0;
+    }
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .nav a:hover,
+.dark-mode .nav a.active {
+  background-color: #333;
+}
+
+.dark-mode .dark-toggle {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .dark-toggle:hover {
+  background-color: #444;
+}
