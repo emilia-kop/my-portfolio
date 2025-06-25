@@ -5,33 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      display: flex;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar {
+      background-color: #2c248b;
+      color: white;
+      width: 220px;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: rgba(255, 255, 255, 0.1);
+      transition: width 0.3s ease;
+      z-index: 0;
+    }
+
+    .nav a:hover::before {
+      width: 100%;
+    }
+
+    .nav a:hover {
+      background-color: #3a32c0;
+      transform: translateX(5px);
+    }
+
+    .nav a:active {
+      transform: scale(0.97);
+    }
+
+    .nav a.active {
+      background-color: #463df5;
+    }
+
+    .dark-toggle {
+      margin-top: 40px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      background: #fff;
+      color: #2c248b;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dark-toggle:hover {
+      background: #ddd;
+    }
+
+    .main-content {
+      margin-left: 240px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    .main-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .main-content p {
+      margin: 10px 0;
+    }
+
+    .buttons {
+      margin: 20px 0;
+    }
+
+    .buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #463df5;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #463df5;
+      border: 1px solid #463df5;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .sidebar {
+      background-color: #1e1e1e;
+    }
+
+    .dark-mode .btn-secondary {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      border: 1px solid #f1f1f1;
+    }
+
+    .dark-mode .nav a:hover,
+    .dark-mode .nav a.active {
+      background-color: #333;
+    }
+
+    .dark-mode .dark-toggle {
+      background-color: #333;
+      color: white;
+    }
+
+    .dark-mode .dark-toggle:hover {
+      background-color: #444;
+    }
+  </style>
 </head>
-
-
-
 <body>
-
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="contact.html">Contact</a>
-</nav>
   <div class="sidebar">
-    <h2>My Portfolio</h2>
+    <h2>Your Name</h2>
     <nav class="nav">
       <a href="#" class="active">Home</a>
-      <a href="about(1).html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
     </nav>
-    <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </div>
 
   <div class="main-content">
-    <h1>Hi, I’m <strong>Shifa Ahad</strong> 👋</h1>
-    <p>B.Tech CSE Student | 🎓 FISAT </p>
+    <h1>Hi, I’m <strong>|Your Name</strong> 👋</h1>
+    <p>B.Tech CSE Student | Web Dev Learner | Curious Creator</p>
+
+    <div class="buttons">
+      <button class="btn-primary">See My Work</button>
+      <button class="btn-secondary">Get In Touch</button>
+    </div>
 
     <h2>About Me</h2>
     <p>I'm a passionate tech enthusiast currently pursuing Computer Science. I enjoy learning about new technologies and working on creative projects that make life easier.</p>
@@ -39,32 +200,21 @@
     <h2>Projects</h2>
     <ul>
       <li>Portfolio Website – This one! 🎉</li>
-      <li>Calculator – Built using python</li>
-      <li>To-do list – Built using html, css, and javascript </li>
-      <li>Form Validator – Built using html, and javascript</li>
+      <li>Weather App – Built using HTML, CSS, JS</li>
+      <li>Mini Game – A simple JavaScript memory game</li>
     </ul>
 
     <h2>Skills</h2>
-    <p>HTML, CSS, JavaScript, Python, C, C++</p>
+    <p>HTML, CSS, JavaScript, Python, C, Git, GitHub</p>
 
     <h2>Contact Me</h2>
-    <p>shifaahad@gmail.com</p>
+    <p>youremail@example.com</p>
   </div>
 
-  
- <script>
-  // Function to toggle dark mode and save preference
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-  }
-
-  // When the page loads, check if dark mode was previously on
-  window.onload = function() {
-    if (localStorage.getItem('darkMode') === 'true') {
-      document.body.classList.add('dark-mode');
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
     }
-  }
-</script>
+  </script>
 </body>
 </html>

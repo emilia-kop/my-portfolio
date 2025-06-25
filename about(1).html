@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>My Portfolio</h2>
+    <nav class="nav">
+      <a href="index(1).html">Home</a>
+      <a href="about(1).html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="main-content">
+     <h1>About Me</h1>
+    <p>Hi! I'm Shifa Ahad, a first-year Computer Science Engineering student at FISAT College of Engineering. I am an enthusiastic learner with a growing passion for web development and software programming. Currently, I'm building a strong foundation in HTML, CSS, and JavaScript as I explore the world of front-end development.
+
+Alongside web technologies, I’m also developing my skills in programming languages like Python, C, and C++, which help me understand problem-solving and logical thinking at a deeper level. I'm excited about the opportunities to apply what I learn through hands-on projects and continuous exploration of new tools and technologies.
+
+As I grow in my field, I'm eager to contribute to meaningful projects, collaborate with like-minded learners, and eventually build innovative tech solutions that make a difference.</p>
+
+    <h2>My Interests</h2>
+    <ul>
+      <li>Web development and responsive design</li>
+      <li>UI/UX principles and aesthetics</li>
+      <li>Programming and building problem-solving applications</li>
+     <li>Exploring new tools and frameworks</li>
+      <li>Learning through real-world projects and collaboration</li>
+      <li>Developing user-friendly and accessible tech solutions</li>
+    </ul>
+    <p>I'm excited to continue growing and learning, and I look forward to contributing to innovative and impactful tech projects in the future.</p>
+    <h2>Goals</h2>
+    <p>My goal is to grow as a versatile developer by building strong skills across various domains, including front-end development, programming languages like Python and C++, and software problem-solving. I’m passionate about creating meaningful solutions—whether it’s a website, an application, or a simple tool—that are efficient, user-friendly, and impactful.
+
+</p>
+  </div>
+
+ <script>
+  // Function to toggle dark mode and save preference
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+  }
+
+  // When the page loads, check if dark mode was previously on
+  window.onload = function() {
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+</body>
+</html>
